@@ -1,0 +1,106 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(../font/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: "Josafin";
+  src: url(../font/JosefinSans-Medium.ttf);
+}
+:root {
+  --primary: #fae01a;
+  --secondary: #1a191a;
+}
+.primaryBg {
+  background: var(--primary);
+}
+.secondaryBg {
+  background: var(--secondary);
+}
+.primaryText {
+  color: var(--primary);
+}
+.secondaryText {
+  color: var(--secondary);
+}
+body {
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  background: #fff;
+  position: relative;
+  min-height: 200vh;
+}
+h1,
+h2,
+h3,
+p,
+a,
+ul,
+li,
+th,
+td,
+button,
+label,
+input,
+textarea,
+select {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+h1 {
+  font-size: 2rem;
+  font-family: "Josafin";
+}
+h2 {
+  font-size: 1.5rem;
+  font-family: "Josafin";
+}
+p,
+a,
+ul,
+li,
+th,
+td,
+button,
+label,
+input,
+textarea,
+select {
+  font-size: 13px;
+  color: var(--secondary);
+  font-family: "Montserrat";
+}
+i {
+  font-size: 1rem;
+  cursor: pointer;
+}
+a:hover {
+  color: var(--primary);
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.logo {
+  width: 100px;
+  height: auto;
+}
+.myNavbar {
+  position: sticky;
+  top: 0;
+  border-top: 2px solid var(--primary);
+  border-bottom: 2px solid var(--primary);
+}
+.links li a {
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+}
+.links li a.active {
+  border-bottom: 2px solid var(--primary);
+}
