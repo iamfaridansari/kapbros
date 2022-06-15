@@ -5,6 +5,18 @@
   h2 {
     font-size: 1rem;
   }
+  .myNavbar {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .myNavbar.active {
+    height: 280;
+    overflow: hidden;
+    opacity: 1;
+    pointer-events: all;
+  }
 }
 @media screen and (max-width: 500px) {
   h1 {

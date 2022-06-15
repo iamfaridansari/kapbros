@@ -33,7 +33,6 @@ body {
   overflow-x: hidden;
   background: #fff;
   position: relative;
-  min-height: 200vh;
 }
 h1,
 h2,
@@ -76,6 +75,10 @@ select {
   color: var(--secondary);
   font-family: "Montserrat";
 }
+textarea {
+  min-height: 100px;
+  max-height: 300px;
+}
 i {
   font-size: 1rem;
   cursor: pointer;
@@ -107,4 +110,34 @@ nav {
 }
 .links li a.active {
   border-bottom: 2px solid var(--primary);
+}
+footer h1,
+footer p {
+  color: #fff;
+}
+.newsletter input,
+.newsletter select,
+.newsletter textarea {
+  width: 100%;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #fff;
+  padding: 5px 10px 5px 0;
+  color: #fff;
+}
+.newsletter input::placeholder,
+.newsletter textarea::placeholder {
+  color: #fff;
+}
+.newsletter select option {
+  color: #000;
+}
+.myBtn {
+  background: var(--primary);
+  color: #000;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  display: inline-block;
+  border: none;
 }

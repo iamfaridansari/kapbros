@@ -1,6 +1,7 @@
 import React from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "../node_modules/bootstrap/dist/js/bootstrap.bundle"
+import "../src/assets/css/responsive.css";
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import "../src/assets/css/style.css";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -10,6 +11,7 @@ import Service from "./pages/Service";
 import Trails from "./pages/Trails";
 import Contact from "./pages/Contact";
 import Registration from "./pages/Registration";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -24,6 +26,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/registration" element={<Registration />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };
