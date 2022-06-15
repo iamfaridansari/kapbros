@@ -15,7 +15,7 @@ const Navbar = () => {
       </div>
 
       <div className="container-fluid myNavbar py-2">
-        <div className="container">
+        <div className="container sticky">
           <ul className="d-flex align-items-center justify-content-center text-center list-unstyled flex-md-row flex-column links">
             <li className="mx-md-4 mb-md-0 mb-4">
               <NavLink to="/" className="pb-1 mb-md-0">

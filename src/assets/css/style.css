@@ -91,9 +91,13 @@ img {
   width: 100px;
   height: auto;
 }
-.myNavbar {
-  position: sticky;
+nav {
+  width: 100%;
+  position: fixed;
   top: 0;
+  z-index: 10;
+}
+.myNavbar {
   border-top: 2px solid var(--primary);
   border-bottom: 2px solid var(--primary);
 }
