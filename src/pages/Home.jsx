@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+//
 import carouselImg from "../assets/images/carousel.png";
 import sample1 from "../assets/images/sample1.png";
 import sample2 from "../assets/images/sample2.png";
@@ -49,6 +52,43 @@ const Home = () => {
       img: carousel11,
     },
   ];
+
+  const basics = [
+    {
+      icon: "fa-solid fa-clock mb-2 primaryText infoIcon",
+      title: "On time delivery",
+      description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Molestiae, provident.",
+    },
+    {
+      icon: "fa-solid fa-gem mb-2 primaryText infoIcon",
+      title: "In quality we trust",
+      description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Molestiae, provident.",
+    },
+    {
+      icon: "fa-solid fa-bag-shopping mb-2 primaryText infoIcon",
+      title: "100% customer satisfaction",
+      description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Molestiae, provident.",
+    },
+  ];
+
+  gsap.registerPlugin(ScrollTrigger);
+  const firstLeft = useRef(null);
+  useEffect(() => {
+    const el = firstLeft.current;
+    gsap.from(el, {
+      x: "-200px",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 50%",
+        end: "top 45%",
+        scrub : true,
+      },
+    });
+  }, []);
+
   return (
     <>
       <div
@@ -111,7 +151,7 @@ const Home = () => {
             <h2 className="mb-2 text-uppercase space">discover the finest</h2>
             <div className="d-flex align-items-center justify-content-between">
               <div className="stroke"></div>
-              <p className="text-uppercase">About us</p>
+              <p className="text-uppercase title">About us</p>
               <div className="stroke"></div>
             </div>
             <p className="my-5">
@@ -132,7 +172,7 @@ const Home = () => {
           <div className="col-md-6">
             <div className="d-flex align-items-center justify-content-between">
               <div className="stroke"></div>
-              <p className="text-uppercase">our gallery</p>
+              <p className="text-uppercase title">our gallery</p>
               <div className="stroke"></div>
             </div>
           </div>
@@ -158,7 +198,7 @@ const Home = () => {
         <h2 className="text-uppercase space text-center">
           WE DEAL WITH ALL KINDS OF PRODUCTS
         </h2>
-        <div className="leftScissor">
+        <div className="leftScissor" ref={firstLeft}>
           <img src={scissor} alt="" />
         </div>
         <div className="rightScissor">
@@ -243,6 +283,68 @@ const Home = () => {
           provident vel repellendus, nisi, labore necessitatibus cum nam omnis
           dolorum nihil rem ullam et maxime corrupti error laborum aliquam unde!
         </p>
+      </div>
+
+      <div className="container py-5">
+        <div className="d-flex align-items-center justify-content-between gap-5 flex-md-row flex-column">
+          {basics.map((item, index) => {
+            return (
+              <div className="shadow p-4 text-center" key={index}>
+                <i className={item.icon}></i>
+                <p className="title text-uppercase mb-2">{item.title}</p>
+                <p>{item.description}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="container-fluid discuss py-5 secondaryBg bg-gradient">
+        <div className="container">
+          <div className="row align-items-start justify-content-between gap-5">
+            <div className="col-md">
+              <h1 className="fw-bold mb-2">
+                Want a dress? <br />
+                Let's discuss.
+              </h1>
+              <p>
+                Thank you for getting in touch <br />
+                Kindly. <br /> Fill the form, Have a great day.
+              </p>
+            </div>
+            <div className="col-md">
+              <form className="newsletter">
+                <div className="row align-items-start justify-content-between ">
+                  <div className="col-md-6 mb-4">
+                    <input type="text" placeholder="Full name" />
+                  </div>
+                  <div className="col-md-6 mb-4">
+                    <input type="email" placeholder="Email address" />
+                  </div>
+                  <div className="col-md-6 mb-4">
+                    <input type="number" placeholder="Phone number" />
+                  </div>
+                  <div className="col-md-6 mb-4">
+                    <select>
+                      <option value="">Country</option>
+                      <option value="India">India</option>
+                    </select>
+                  </div>
+                  <div className="col-12 mb-4">
+                    <select>
+                      <option value="">Interested in</option>
+                      <option value="India">Kurta</option>
+                    </select>
+                  </div>
+                  <div className="col-12 mb-4">
+                    <textarea placeholder="Message"></textarea>
+                  </div>
+                </div>
+                <button className="myBtn">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

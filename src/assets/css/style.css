@@ -97,6 +97,10 @@ img {
   width: 100%;
   height: auto;
 }
+.title {
+  font-size: 15px;
+  font-weight: bold;
+}
 .logo {
   width: 100px;
   height: auto;
@@ -118,14 +122,14 @@ nav {
 .links li a.active {
   border-bottom: 2px solid var(--primary);
 }
-footer h1,
-footer p {
+.discuss h1,
+.discuss p {
   color: #fff;
 }
-footer h1 {
+.discuss h1 {
   font-size: 3rem;
 }
-footer p {
+.discuss p {
   font-size: 1.25rem;
 }
 .newsletter input,
@@ -225,4 +229,45 @@ footer p {
   width: 70%;
   margin: -70px auto;
   z-index: 1;
+}
+.infoIcon {
+  font-size: 2rem;
+}
+.social li {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--secondary);
+  display: grid;
+  place-items: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.social li a {
+  display: grid;
+  place-items: center;
+  align-items: center;
+  justify-content: center;
+}
+.subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 80%;
+}
+.subscribe input {
+  width: 100%;
+  padding: 5px 10px;
+  border: 2px solid var(--primary);
+  outline: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.subscribe button {
+  padding: 5px 10px;
+  border: 2px solid var(--primary);
+  outline: none;
+  background: var(--primary);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
