@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="container-fluid py-5 secondaryBg bg-gradient">
       <div className="container">
-        <div className="row align-items-start justify-content-between">
+        <div className="row align-items-start justify-content-between gap-5">
           <div className="col-md">
             <h1 className="fw-bold mb-2">
               Want a dress? <br />
