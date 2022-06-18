@@ -1,6 +1,4 @@
-import React, { useRef, useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React from "react";
 //
 import carouselImg from "../assets/images/carousel.png";
 import sample1 from "../assets/images/sample1.png";
@@ -73,21 +71,6 @@ const Home = () => {
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Molestiae, provident.",
     },
   ];
-
-  gsap.registerPlugin(ScrollTrigger);
-  const firstLeft = useRef(null);
-  useEffect(() => {
-    const el = firstLeft.current;
-    gsap.from(el, {
-      x: "-200px",
-      scrollTrigger: {
-        trigger: el,
-        start: "top 50%",
-        end: "top 45%",
-        scrub : true,
-      },
-    });
-  }, []);
 
   return (
     <>
@@ -198,7 +181,7 @@ const Home = () => {
         <h2 className="text-uppercase space text-center">
           WE DEAL WITH ALL KINDS OF PRODUCTS
         </h2>
-        <div className="leftScissor" ref={firstLeft}>
+        <div className="leftScissor">
           <img src={scissor} alt="" />
         </div>
         <div className="rightScissor">
