@@ -41,17 +41,17 @@ const Footer = () => {
           <ul className="social d-flex align-items-center justify-content-start list-unstyled mt-5">
             <li className="me-5">
               <a href="javascript:void(0)">
-                <i class="fa-brands fa-linkedin-in"></i>
+                <i className="fa-brands fa-linkedin-in"></i>
               </a>
             </li>
             <li className="me-5">
               <a href="javascript:void(0)">
-                <i class="fa-brands fa-facebook-f"></i>
+                <i className="fa-brands fa-facebook-f"></i>
               </a>
             </li>
             <li>
               <a href="javascript:void(0)">
-                <i class="fa-brands fa-twitter"></i>
+                <i className="fa-brands fa-twitter"></i>
               </a>
             </li>
           </ul>
@@ -74,7 +74,7 @@ const Footer = () => {
           <form className="subscribe mb-5">
             <input type="text" placeholder="Email address" />
             <button>
-              <i class="fa-solid fa-arrow-right-long"></i>
+              <i className="fa-solid fa-arrow-right-long"></i>
             </button>
           </form>
 

@@ -10,17 +10,11 @@
   h2 {
     font-size: 1rem;
   }
-  .myNavbar {
-    height: 0;
-    overflow: hidden;
-    opacity: 0;
-    pointer-events: none;
+  .scissorPadding {
+    padding: 2.5rem 0;
   }
-  .myNavbar.active {
-    height: 280;
-    overflow: hidden;
-    opacity: 1;
-    pointer-events: all;
+  .route {
+    display: none;
   }
 }
 @media screen and (max-width: 576px) {
@@ -41,5 +35,15 @@
   }
   .discuss p {
     font-size: 13px;
+  }
+  .circle2 {
+    width: 75px;
+  }
+  .circle3 {
+    width: 100px;
+    margin-top: 5%;
+  }
+  .circle4 {
+    width: 150px;
   }
 }

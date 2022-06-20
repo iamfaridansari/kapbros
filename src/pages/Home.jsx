@@ -83,19 +83,19 @@ const Home = () => {
           <div className="carousel-item active">
             <img src={carouselImg} className="d-block w-100" alt="" />
             <div className="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
+              <h2>First slide label</h2>
             </div>
           </div>
           <div className="carousel-item">
             <img src={carouselImg} className="d-block w-100" alt="" />
             <div className="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>{" "}
+              <h2>Second slide label</h2>
             </div>
           </div>
           <div className="carousel-item">
             <img src={carouselImg} className="d-block w-100" alt="" />
             <div className="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>{" "}
+              <h2>Third slide label</h2>
             </div>
           </div>
         </div>
@@ -177,7 +177,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="container-fluid dashedBorder py-2 mt-5">
+      <div className="container-fluid dashedBorder scissorPadding mt-5">
         <h2 className="text-uppercase space text-center">
           WE DEAL WITH ALL KINDS OF PRODUCTS
         </h2>
@@ -192,7 +192,7 @@ const Home = () => {
       <div className="container py-5">
         <div className="row align-items-center justify-content-center gap-md-0 gap-4 pb-5">
           <div className="col-md-2 order-md-2 text-center">
-            <p className="text-uppercase dashedBorder">From basic</p>
+            <p className="text-uppercase dashedBorder p-1">From basic</p>
           </div>
           <div className="col-md-3 col-sm-6 order-md-1">
             <img src={carousel5} alt="" />
@@ -213,7 +213,7 @@ const Home = () => {
 
         <div className="row align-items-center justify-content-center gap-md-0 gap-4 pb-5">
           <div className="col-md-2 order-md-2 text-center">
-            <p className="text-uppercase dashedBorder">To occasions</p>
+            <p className="text-uppercase dashedBorder p-1">To occasions</p>
           </div>
           <div className="col-md-3 col-sm-6 order-md-3">
             <img src={sample2} alt="" />
@@ -234,7 +234,7 @@ const Home = () => {
 
         <div className="row align-items-center justify-content-center gap-md-0 gap-4 pb-5">
           <div className="col-md-2 order-md-2 text-center">
-            <p className="text-uppercase dashedBorder">to weading wear</p>
+            <p className="text-uppercase dashedBorder p-1">to weading wear</p>
           </div>
           <div className="col-md-3 col-sm-6 order-md-1">
             <img src={carousel6} alt="" />
@@ -250,7 +250,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="container-fluid dashedBorder py-2 mt-5">
+      <div className="container-fluid dashedBorder scissorPadding mt-5">
         <h2 className="text-uppercase space text-center">Our basics</h2>
         <div className="leftScissor">
           <img src={scissor} alt="" />
@@ -272,7 +272,7 @@ const Home = () => {
         <div className="d-flex align-items-center justify-content-between gap-5 flex-md-row flex-column">
           {basics.map((item, index) => {
             return (
-              <div className="shadow p-4 text-center" key={index}>
+              <div className="shadow p-4 text-center myCard" key={index}>
                 <i className={item.icon}></i>
                 <p className="title text-uppercase mb-2">{item.title}</p>
                 <p>{item.description}</p>
