@@ -116,10 +116,22 @@ img {
   display: block;
   padding: 0;
   position: sticky;
-  top: 0;
+  top: -78px;
   z-index: 10;
 }
-
+header {
+  transition: all 0.3s ease-in-out;
+}
+header.active {
+  background: var(--primary);
+}
+header.active .links li a.active {
+  border-bottom: 1px solid #000;
+}
+.strokeContainer {
+  width: 50%;
+  margin: 0 auto;
+}
 .myNavbar {
   border-top: 2px solid var(--primary);
   border-bottom: 2px solid var(--primary);
@@ -133,6 +145,7 @@ img {
 .links li a {
   text-transform: uppercase;
   border-bottom: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
 }
 .links li a.active {
   border-bottom: 2px solid var(--primary);
@@ -178,7 +191,7 @@ img {
   height: 100%;
 }
 .space {
-  letter-spacing: 5px;
+  letter-spacing: 0;
 }
 .stroke {
   width: 33%;
@@ -233,7 +246,7 @@ img {
   width: 50px;
   position: absolute;
   top: 0;
-  left: 10px;
+  left: 2%;
   transform: translateY(-50%);
 }
 .rightScissor {
@@ -320,15 +333,34 @@ img {
 .scissorPadding {
   padding: 0.5rem 0;
 }
+.myCard {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+.myCard .min-height {
+  min-height: 200px;
+}
 .myCard,
 .myCard p {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
 .myCard:hover {
-  background: #000;
-  box-shadow: 0 0 10px #000;
+  background: var(--secondary);
 }
 .myCard:hover.myCard p {
   color: #fff;
+}
+.scrollToTop {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 9;
+}
+.extraLogo {
+  display: none;
+}
+.extrLogoImg {
+  width: 50px;
 }

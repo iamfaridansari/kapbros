@@ -4,11 +4,13 @@ import logo from "../assets/images/logo.png";
 const Registration = () => {
   return (
     <>
-      <div className="container py-4">
-        <div className="d-flex align-items-center justify-content-between">
-          <div className="stroke"></div>
-          <p className="text-uppercase title">Registration</p>
-          <div className="stroke"></div>
+      <div className="row align-items-center justify-content-center m-0 my-5">
+        <div className="col-md-6">
+          <div className="d-flex align-items-center justify-content-between">
+            <div className="stroke"></div>
+            <p className="text-uppercase title text-center">our gallery</p>
+            <div className="stroke"></div>
+          </div>
         </div>
       </div>
 

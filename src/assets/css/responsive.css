@@ -4,26 +4,21 @@
   }
 }
 @media screen and (max-width: 768px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-  h2 {
-    font-size: 1rem;
-  }
   .scissorPadding {
     padding: 2.5rem 0;
   }
   .route {
     display: none;
   }
+  .strokeContainer {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .myCard .min-height {
+    min-height: auto;
+  }
 }
 @media screen and (max-width: 576px) {
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 1rem;
-  }
   footer h1 {
     font-size: 2rem;
   }
@@ -45,5 +40,11 @@
   }
   .circle4 {
     width: 150px;
+  }
+  .myCarouselContainer .myCarousel .myImage img {
+    width: 150px;
+  }
+  .myCarouselContainer .myCarousel .myImage {
+    margin-right: 25px;
   }
 }

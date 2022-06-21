@@ -12,6 +12,8 @@ import Trails from "./pages/Trails";
 import Contact from "./pages/Contact";
 import Registration from "./pages/Registration";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+import ProductDetails from "./pages/ProductDetails";
 
 const App = () => {
   return (
@@ -23,10 +25,12 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/service" element={<Service />} />
         <Route path="/trails" element={<Trails />} />
+        <Route path="/productDetails" element={<ProductDetails />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/registration" element={<Registration />} />
       </Routes>
       <Footer />
+      <ScrollToTop />
     </Router>
   );
 };

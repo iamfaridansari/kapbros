@@ -21,33 +21,43 @@ const Home = () => {
   const myCarouselImages = [
     {
       img: carousel2,
+      title: "Product name",
     },
     {
       img: carousel3,
+      title: "Product name",
     },
     {
       img: carousel4,
+      title: "Product name",
     },
     {
       img: carousel5,
+      title: "Product name",
     },
     {
       img: carousel6,
+      title: "Product name",
     },
     {
       img: carousel7,
+      title: "Product name",
     },
     {
       img: carousel8,
+      title: "Product name",
     },
     {
       img: carousel9,
+      title: "Product name",
     },
     {
       img: carousel10,
+      title: "Product name",
     },
     {
       img: carousel11,
+      title: "Product name",
     },
   ];
 
@@ -131,10 +141,12 @@ const Home = () => {
             <img src={sample1} alt="" />
           </div>
           <div className="col-md-6 col-sm">
-            <h2 className="mb-2 text-uppercase space">discover the finest</h2>
+            <h2 className="mb-2 text-uppercase space text-center">
+              discover the finest
+            </h2>
             <div className="d-flex align-items-center justify-content-between">
               <div className="stroke"></div>
-              <p className="text-uppercase title">About us</p>
+              <p className="text-uppercase title text-center">About us</p>
               <div className="stroke"></div>
             </div>
             <p className="my-5">
@@ -155,7 +167,7 @@ const Home = () => {
           <div className="col-md-6">
             <div className="d-flex align-items-center justify-content-between">
               <div className="stroke"></div>
-              <p className="text-uppercase title">our gallery</p>
+              <p className="text-uppercase title text-center">our gallery</p>
               <div className="stroke"></div>
             </div>
           </div>
@@ -168,7 +180,7 @@ const Home = () => {
                 <div className="myImage" key={index}>
                   <img src={item.img} alt="" />
                   <div className="name text-center">
-                    <p className="text-white">Product name</p>
+                    <p className="text-white">{item.title}</p>
                   </div>
                 </div>
               );
@@ -273,9 +285,11 @@ const Home = () => {
           {basics.map((item, index) => {
             return (
               <div className="shadow p-4 text-center myCard" key={index}>
-                <i className={item.icon}></i>
-                <p className="title text-uppercase mb-2">{item.title}</p>
-                <p>{item.description}</p>
+                <div className="min-height">
+                  <i className={item.icon}></i>
+                  <p className="title text-uppercase mb-2">{item.title}</p>
+                  <p>{item.description}</p>
+                </div>
               </div>
             );
           })}

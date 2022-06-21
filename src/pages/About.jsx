@@ -12,10 +12,10 @@ const About = () => {
             </div>
           </div>
           <div className="col-md-7 pt-5">
-            <h2 className="mb-2 text-uppercase space">discover the finest</h2>
+            <h2 className="mb-2 text-uppercase space text-center">discover the finest</h2>
             <div className="d-flex align-items-center justify-content-between">
               <div className="stroke"></div>
-              <p className="text-uppercase title">About us</p>
+              <p className="text-uppercase title text-center">About us</p>
               <div className="stroke"></div>
             </div>
             <p className="mt-5">

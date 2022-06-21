@@ -3,14 +3,18 @@ import logo from "../assets/images/logo.png";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const navRef = useRef(null);
+  let extraLogo = useRef(null);
+  const header = useRef(null);
   window.onscroll = () => {
-    if (window.scrollY > 100) {
-      navRef.current.classList.add("active");
+    if (window.scrollY > 75) {
+      header.current.classList.add("active");
+      extraLogo.current.classList.remove("extraLogo")
     } else {
-      navRef.current.classList.remove("active");
+      header.current.classList.remove("active");
+      extraLogo.current.classList.add("extraLogo")
     }
   };
+
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container py-2 d-flex align-items-center justify-content-lg-center justify-content-between">
@@ -30,15 +34,20 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div
+      <header
         className="collapse navbar-collapse myNavbar"
         id="navbarSupportedContent"
+        ref={header}
       >
-        <div
-          className="container sticky navbar-nav me-auto mb-lg-0 py-2"
-          ref={navRef}
-        >
+        <div className="container sticky navbar-nav me-auto mb-lg-0 py-2">
           <ul className="d-flex align-items-center justify-content-center text-center list-unstyled flex-lg-row flex-column links">
+            <li className="extraLogo mx-md-4 mb-lg-0 mb-3" ref={extraLogo}>
+              <NavLink to="/" className="pb-1 mb-md-0">
+                <div className="extrLogoImg">
+                  <img src={logo} alt="" />
+                </div>
+              </NavLink>
+            </li>
             <li className="mx-md-4 mb-lg-0 mb-3">
               <NavLink to="/" className="pb-1 mb-md-0">
                 Home
@@ -71,7 +80,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </header>
     </nav>
   );
 };
