@@ -1,22 +1,33 @@
-import React from "react";
-import circle2 from "../assets/images/circle2.png";
-import circle3 from "../assets/images/circle3.png";
-import circle4 from "../assets/images/circle4.png";
+import React, { useContext } from "react";
+import { myContext } from "../App";
 
 const Service = () => {
+  const { two, three, four } = useContext(myContext);
   return (
     <>
       <div className="container py-5">
         <div className="row align-items-start justify-content-between gap-5">
           <div className="col-md">
             <div className="circle2">
-              <img src={circle2} alt="" />
+              <img
+                src={two}
+                className="square normalBorder myShadow circle"
+                alt=""
+              />
             </div>
             <div className="circle3">
-              <img src={circle3} alt="" />
+              <img
+                src={three}
+                className="square normalBorder myShadow circle"
+                alt=""
+              />
             </div>
             <div className="circle4">
-              <img src={circle4} alt="" />
+              <img
+                src={four}
+                className="square normalBorder myShadow circle"
+                alt=""
+              />
             </div>
           </div>
           <div className="col-md">

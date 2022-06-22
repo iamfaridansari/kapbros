@@ -2,6 +2,9 @@
   .subscribe {
     width: 100%;
   }
+  .carousel.margin {
+    margin-top: -78px;
+  }
 }
 @media screen and (max-width: 768px) {
   .scissorPadding {
@@ -16,6 +19,12 @@
   }
   .myCard .min-height {
     min-height: auto;
+  }
+  .discuss::before {
+    font-size: 20vw;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
   }
 }
 @media screen and (max-width: 576px) {
@@ -46,5 +55,14 @@
   }
   .myCarouselContainer .myCarousel .myImage {
     margin-right: 25px;
+  }
+  .logo {
+    width: 50px;
+  }
+  .carousel.margin {
+    margin-top: -55px;
+  }
+  .navbar-toggler {
+    padding-right: 0;
   }
 }

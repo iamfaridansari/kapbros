@@ -1,62 +1,53 @@
-import React from "react";
+import React, { useContext } from "react";
+import { myContext } from "../App";
 //
 import carouselImg from "../assets/images/carousel.png";
-import sample1 from "../assets/images/sample1.png";
-import sample2 from "../assets/images/sample2.png";
-import carousel2 from "../assets/images/carousel2.png";
-import carousel3 from "../assets/images/carousel3.png";
-import carousel4 from "../assets/images/carousel4.png";
-import carousel5 from "../assets/images/carousel5.png";
-import carousel6 from "../assets/images/carousel6.png";
-import carousel7 from "../assets/images/carousel7.png";
-import carousel8 from "../assets/images/carousel8.png";
-import carousel9 from "../assets/images/carousel9.png";
-import carousel10 from "../assets/images/carousel10.png";
-import carousel11 from "../assets/images/carousel11.png";
 import scissor from "../assets/images/scissor.png";
 import route1 from "../assets/images/route1.png";
 import route2 from "../assets/images/route2.png";
 
 const Home = () => {
+  const { one, two, three, four, five, six, seven, eight, nine, ten, margin } =
+    useContext(myContext);
   const myCarouselImages = [
     {
-      img: carousel2,
+      img: one,
       title: "Product name",
     },
     {
-      img: carousel3,
+      img: two,
       title: "Product name",
     },
     {
-      img: carousel4,
+      img: three,
       title: "Product name",
     },
     {
-      img: carousel5,
+      img: four,
       title: "Product name",
     },
     {
-      img: carousel6,
+      img: five,
       title: "Product name",
     },
     {
-      img: carousel7,
+      img: six,
       title: "Product name",
     },
     {
-      img: carousel8,
+      img: seven,
       title: "Product name",
     },
     {
-      img: carousel9,
+      img: eight,
       title: "Product name",
     },
     {
-      img: carousel10,
+      img: nine,
       title: "Product name",
     },
     {
-      img: carousel11,
+      img: ten,
       title: "Product name",
     },
   ];
@@ -86,7 +77,7 @@ const Home = () => {
     <>
       <div
         id="carouselExampleCaptions"
-        className="carousel slide"
+        className={margin ? "carousel slide margin" : "carousel slide"}
         data-bs-ride="false"
       >
         <div className="carousel-inner">
@@ -138,7 +129,7 @@ const Home = () => {
       <div className="container py-5">
         <div className="row align-items-start justify-content-between gap-md-0 gap-5">
           <div className="col-md-4 col-sm">
-            <img src={sample1} alt="" />
+            <img src={seven} className="normalBorder myShadow" alt="" />
           </div>
           <div className="col-md-6 col-sm">
             <h2 className="mb-2 text-uppercase space text-center">
@@ -177,8 +168,12 @@ const Home = () => {
           <div className="myCarousel">
             {myCarouselImages.map((item, index) => {
               return (
-                <div className="myImage" key={index}>
-                  <img src={item.img} alt="" />
+                <div className="myImage myRadius myShadow" key={index}>
+                  <img
+                    src={item.img}
+                    className="square myRadius myShadow"
+                    alt=""
+                  />
                   <div className="name text-center">
                     <p className="text-white">{item.title}</p>
                   </div>
@@ -207,7 +202,7 @@ const Home = () => {
             <p className="text-uppercase dashedBorder p-1">From basic</p>
           </div>
           <div className="col-md-3 col-sm-6 order-md-1">
-            <img src={carousel5} alt="" />
+            <img src={one} className="square myRadius myShadow" alt="" />
           </div>
           <div className="col-md-6 order-md-3">
             <p className="text-md-start text-center">
@@ -228,7 +223,7 @@ const Home = () => {
             <p className="text-uppercase dashedBorder p-1">To occasions</p>
           </div>
           <div className="col-md-3 col-sm-6 order-md-3">
-            <img src={sample2} alt="" />
+            <img src={seven} className="square myRadius myShadow" alt="" />
           </div>
           <div className="col-md-6 order-md-1">
             <p className="text-md-start text-center">
@@ -249,7 +244,7 @@ const Home = () => {
             <p className="text-uppercase dashedBorder p-1">to weading wear</p>
           </div>
           <div className="col-md-3 col-sm-6 order-md-1">
-            <img src={carousel6} alt="" />
+            <img src={three} className="square myRadius myShadow" alt="" />
           </div>
           <div className="col-md-6 order-md-3">
             <p className="text-md-start text-center">

@@ -150,6 +150,21 @@ header.active .links li a.active {
 .links li a.active {
   border-bottom: 2px solid var(--primary);
 }
+.discuss {
+  position: relative;
+  overflow: hidden;
+}
+.discuss::before {
+  content: "contact us";
+  font-size: 18vw;
+  color: transparent;
+  font-weight: bold;
+  -webkit-text-stroke: 1px #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.1;
+}
 .discuss h1,
 .discuss p {
   color: #fff;
@@ -186,6 +201,12 @@ header.active .links li a.active {
   display: inline-block;
   border: none;
 }
+.carousel {
+  transition: all 0.3s ease-in-out;
+}
+.carousel.margin {
+  margin-top: -118px;
+}
 .carousel-item img {
   width: 100%;
   height: 100%;
@@ -210,6 +231,7 @@ header.active .links li a.active {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  padding: 0 50px 50px 0;
 }
 .myCarouselContainer .myCarousel::-webkit-scrollbar {
   display: none;
@@ -234,6 +256,8 @@ header.active .links li a.active {
   position: absolute;
   left: 0;
   bottom: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 .dashedBorder {
   border: 1px dashed var(--tertiary);
@@ -241,6 +265,12 @@ header.active .links li a.active {
 }
 .normalBorder {
   border: 2px solid var(--primary);
+}
+.myRadius {
+  border-radius: 10px;
+}
+.myShadow {
+  box-shadow: 8px 12px 15px 0px rgba(0, 0, 0, 0.25);
 }
 .leftScissor {
   width: 50px;
@@ -304,8 +334,11 @@ header.active .links li a.active {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+.circle {
+  border-radius: 50%;
+}
 .circle1 {
-  transform: translate(-20%, -20%);
+  transform: translate(-20%, -20%) rotate(-22deg);
 }
 .circle2 {
   width: 100px;
@@ -342,15 +375,17 @@ header.active .links li a.active {
   min-height: 200px;
 }
 .myCard,
-.myCard p {
+.myCard p,
+.myCard i {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
 .myCard:hover {
-  background: var(--secondary);
+  background: var(--primary);
+  border-radius: 10px;
 }
-.myCard:hover.myCard p {
-  color: #fff;
+.myCard:hover.myCard i {
+  color: var(--secondary);
 }
 .scrollToTop {
   position: fixed;
@@ -363,4 +398,7 @@ header.active .links li a.active {
 }
 .extrLogoImg {
   width: 50px;
+}
+.square {
+  aspect-ratio: 1;
 }

@@ -1,7 +1,8 @@
-import React from "react";
-import sample3 from "../assets/images/sample3.png";
+import React, { useContext } from "react";
+import { myContext } from "../App";
 
 const Contact = () => {
+  const { eight } = useContext(myContext);
   return (
     <>
       <div className="row align-items-center justify-content-center m-0 my-5">
@@ -56,7 +57,7 @@ const Contact = () => {
             <button className="myBtn mt-4">Submit</button>
           </div>
           <div className="col-md-4 col-sm-6">
-            <img src={sample3} alt="" />
+            <img src={eight} className="normalBorder rounded myShadow" alt="" />
           </div>
         </div>
       </div>
