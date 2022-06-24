@@ -118,6 +118,7 @@ img {
   position: sticky;
   top: -78px;
   z-index: 10;
+  background: rgb(0 0 0 / 50%);
 }
 header {
   transition: all 0.3s ease-in-out;
@@ -146,6 +147,10 @@ header.active .links li a.active {
   text-transform: uppercase;
   border-bottom: 2px solid transparent;
   transition: all 0.3s ease-in-out;
+  color: #fff;
+}
+header.active .links li a {
+  color: #000;
 }
 .links li a.active {
   border-bottom: 2px solid var(--primary);

@@ -241,7 +241,7 @@ const Home = () => {
 
         <div className="row align-items-center justify-content-center gap-md-0 gap-4 pb-5">
           <div className="col-md-2 order-md-2 text-center">
-            <p className="text-uppercase dashedBorder p-1">to weading wear</p>
+            <p className="text-uppercase dashedBorder p-1">to wedding wear</p>
           </div>
           <div className="col-md-3 col-sm-6 order-md-1">
             <img src={three} className="square myRadius myShadow" alt="" />
