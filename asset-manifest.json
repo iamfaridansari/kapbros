@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/kapbros/static/css/main.ffb35f4c.css",
+    "main.js": "/kapbros/static/js/main.04d86968.js",
+    "static/media/carousel.png": "/kapbros/static/media/carousel.0449a71c9824b6ce9426.png",
+    "static/media/carousel2.png": "/kapbros/static/media/carousel2.7e9c23e0d4d4e6e487c4.png",
+    "static/media/carousel3.png": "/kapbros/static/media/carousel3.4e6ca06263cae4b2ca89.png",
+    "static/media/carousel6.png": "/kapbros/static/media/carousel6.4daadbb3d43ee8061c8c.png",
+    "static/media/carousel4.png": "/kapbros/static/media/carousel4.0ad9a537378e0888a88a.png",
+    "static/media/Montserrat-Medium.ttf": "/kapbros/static/media/Montserrat-Medium.3a0917345468c959207a.ttf",
+    "static/media/carousel5.png": "/kapbros/static/media/carousel5.c415032a6e9594f574b6.png",
+    "static/media/carousel10.png": "/kapbros/static/media/carousel10.7d3a610c98ab071134d7.png",
+    "static/media/sample3.png": "/kapbros/static/media/sample3.e22c6b1b2d1f8f58d70b.png",
+    "static/media/8.png": "/kapbros/static/media/8.c5594499dff4057e05d6.png",
+    "static/media/5.png": "/kapbros/static/media/5.dc95eb0f9680d70a0a97.png",
+    "static/media/3.png": "/kapbros/static/media/3.477bf78dd2efc3ec373d.png",
+    "static/media/carousel11.png": "/kapbros/static/media/carousel11.ae6f31463a8a59994ce1.png",
+    "static/media/9.png": "/kapbros/static/media/9.b20b124a77717f021ac4.png",
+    "static/media/6.png": "/kapbros/static/media/6.fd5fc97af5c362347915.png",
+    "static/media/carousel7.png": "/kapbros/static/media/carousel7.60a76d9ce1f3b2ccf2e1.png",
+    "static/media/carousel9.png": "/kapbros/static/media/carousel9.60a76d9ce1f3b2ccf2e1.png",
+    "static/media/carousel8.png": "/kapbros/static/media/carousel8.bd15ca589975b7ac7634.png",
+    "static/media/2.png": "/kapbros/static/media/2.040295a807039db219c4.png",
+    "static/media/7.png": "/kapbros/static/media/7.74f3525fc223b7a83128.png",
+    "static/media/4.png": "/kapbros/static/media/4.e754346e29d45f0ad2a3.png",
+    "static/media/1.png": "/kapbros/static/media/1.7ee577edf364a0e65c88.png",
+    "static/media/10.png": "/kapbros/static/media/10.b34789ed1c0a198f8b76.png",
+    "static/media/JosefinSans-Medium.ttf": "/kapbros/static/media/JosefinSans-Medium.45a5738c27c1bbbecc0c.ttf",
+    "index.html": "/kapbros/index.html",
+    "main.ffb35f4c.css.map": "/kapbros/static/css/main.ffb35f4c.css.map",
+    "main.04d86968.js.map": "/kapbros/static/js/main.04d86968.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ffb35f4c.css",
+    "static/js/main.04d86968.js"
+  ]
+}
