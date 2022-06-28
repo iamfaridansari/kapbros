@@ -4,7 +4,7 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import "../src/assets/css/style.css";
 import "../src/assets/css/responsive.css";
 import Navbar from "./components/Navbar";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Service from "./pages/Service";
@@ -31,38 +31,36 @@ export const myContext = createContext();
 const App = () => {
   const [margin, setMargin] = useState(true);
   return (
-    <Router>
-      <myContext.Provider
-        value={{
-          one,
-          two,
-          three,
-          four,
-          five,
-          six,
-          seven,
-          eight,
-          nine,
-          ten,
-          margin,
-          setMargin,
-        }}
-      >
-        <Navbar />
+    <myContext.Provider
+      value={{
+        one,
+        two,
+        three,
+        four,
+        five,
+        six,
+        seven,
+        eight,
+        nine,
+        ten,
+        margin,
+        setMargin,
+      }}
+    >
+      <Navbar />
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/service" element={<Service />} />
-          <Route path="/trails" element={<Trails />} />
-          <Route path="/productDetails" element={<ProductDetails />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/registration" element={<Registration />} />
-        </Routes>
-        <Footer />
-        <ScrollToTop />
-      </myContext.Provider>
-    </Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/service" element={<Service />} />
+        <Route path="/trails" element={<Trails />} />
+        <Route path="/productDetails" element={<ProductDetails />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/registration" element={<Registration />} />
+      </Routes>
+      <Footer />
+      <ScrollToTop />
+    </myContext.Provider>
   );
 };
 
