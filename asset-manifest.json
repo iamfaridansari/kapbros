@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/kapbros/static/css/main.ffb35f4c.css",
-    "main.js": "/kapbros/static/js/main.04d86968.js",
+    "main.js": "/kapbros/static/js/main.e243a347.js",
     "static/media/carousel.png": "/kapbros/static/media/carousel.0449a71c9824b6ce9426.png",
     "static/media/carousel2.png": "/kapbros/static/media/carousel2.7e9c23e0d4d4e6e487c4.png",
     "static/media/carousel3.png": "/kapbros/static/media/carousel3.4e6ca06263cae4b2ca89.png",
@@ -28,10 +28,10 @@
     "static/media/JosefinSans-Medium.ttf": "/kapbros/static/media/JosefinSans-Medium.45a5738c27c1bbbecc0c.ttf",
     "index.html": "/kapbros/index.html",
     "main.ffb35f4c.css.map": "/kapbros/static/css/main.ffb35f4c.css.map",
-    "main.04d86968.js.map": "/kapbros/static/js/main.04d86968.js.map"
+    "main.e243a347.js.map": "/kapbros/static/js/main.e243a347.js.map"
   },
   "entrypoints": [
     "static/css/main.ffb35f4c.css",
-    "static/js/main.04d86968.js"
+    "static/js/main.e243a347.js"
   ]
 }
