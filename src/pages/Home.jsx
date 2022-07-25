@@ -1,10 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { myContext } from "../App";
 //
 import carouselImg from "../assets/images/carousel.png";
 import scissor from "../assets/images/scissor.png";
 import route1 from "../assets/images/route1.png";
 import route2 from "../assets/images/route2.png";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 const Home = () => {
   const { one, two, three, four, five, six, seven, eight, nine, ten, margin } =
@@ -73,6 +75,83 @@ const Home = () => {
     },
   ];
 
+  // gsap
+  gsap.registerPlugin(ScrollTrigger);
+  const discoverImgRef = useRef(null);
+  const img1Ref = useRef(null);
+  const img2Ref = useRef(null);
+  const img3Ref = useRef(null);
+
+  useEffect(() => {
+    const discoverImg = discoverImgRef.current;
+    const img1 = img1Ref.current;
+    const img2 = img2Ref.current;
+    const img3 = img3Ref.current;
+
+    gsap.from(discoverImg, {
+      scale: 0.5,
+      duration: 1,
+      ease: "expo.in",
+      scrollTrigger: {
+        trigger: discoverImg,
+        start: "top 80%",
+        end: "top 80%",
+        toggleActions: "resume pause restart complete",
+        scrub: 2,
+      },
+    });
+
+    gsap.from(".myImage", {
+      scale: 0.5,
+      duration: 1,
+      ease: "expo.in",
+      scrollTrigger: {
+        trigger: ".myCarouselContainer",
+        start: "top 80%",
+        end: "top 80%",
+        toggleActions: "resume pause restart complete",
+        scrub: 2,
+      },
+    });
+
+    gsap.from(img1, {
+      scale: 0.5,
+      duration: 1,
+      ease: "expo.in",
+      scrollTrigger: {
+        trigger: img1,
+        start: "top 80%",
+        end: "top 80%",
+        toggleActions: "resume pause restart complete",
+        scrub: 2,
+      },
+    });
+    gsap.from(img2, {
+      scale: 0.5,
+      duration: 1,
+      ease: "expo.in",
+      scrollTrigger: {
+        trigger: img2,
+        start: "top 80%",
+        end: "top 80%",
+        toggleActions: "resume pause restart complete",
+        scrub: 2,
+      },
+    });
+    gsap.from(img3, {
+      scale: 0.5,
+      duration: 1,
+      ease: "expo.in",
+      scrollTrigger: {
+        trigger: img3,
+        start: "top 80%",
+        end: "top 80%",
+        toggleActions: "resume pause restart complete",
+        scrub: 2,
+      },
+    });
+  }, []);
+
   return (
     <>
       <div
@@ -129,7 +208,12 @@ const Home = () => {
       <div className="container py-5">
         <div className="row align-items-start justify-content-between gap-md-0 gap-5">
           <div className="col-md-4 col-sm">
-            <img src={seven} className="normalBorder myShadow" alt="" />
+            <img
+              src={seven}
+              className="normalBorder myShadow"
+              ref={discoverImgRef}
+              alt=""
+            />
           </div>
           <div className="col-md-6 col-sm">
             <h2 className="mb-2 text-uppercase space text-center">
@@ -146,7 +230,7 @@ const Home = () => {
               nostrum vero porro iste alias impedit est, culpa magni optio,
               nesciunt natus?
             </p>
-            <a href="javascript:void(0)" className="myBtn">
+            <a href="/" className="myBtn">
               Know more
             </a>
           </div>
@@ -202,7 +286,12 @@ const Home = () => {
             <p className="text-uppercase dashedBorder p-1">From basic</p>
           </div>
           <div className="col-md-3 col-sm-6 order-md-1">
-            <img src={one} className="square myRadius myShadow" alt="" />
+            <img
+              src={one}
+              className="square myRadius myShadow"
+              ref={img1Ref}
+              alt=""
+            />
           </div>
           <div className="col-md-6 order-md-3">
             <p className="text-md-start text-center">
@@ -223,7 +312,12 @@ const Home = () => {
             <p className="text-uppercase dashedBorder p-1">To occasions</p>
           </div>
           <div className="col-md-3 col-sm-6 order-md-3">
-            <img src={seven} className="square myRadius myShadow" alt="" />
+            <img
+              src={seven}
+              className="square myRadius myShadow"
+              ref={img2Ref}
+              alt=""
+            />
           </div>
           <div className="col-md-6 order-md-1">
             <p className="text-md-start text-center">
@@ -244,7 +338,12 @@ const Home = () => {
             <p className="text-uppercase dashedBorder p-1">to wedding wear</p>
           </div>
           <div className="col-md-3 col-sm-6 order-md-1">
-            <img src={three} className="square myRadius myShadow" alt="" />
+            <img
+              src={three}
+              className="square myRadius myShadow"
+              ref={img3Ref}
+              alt=""
+            />
           </div>
           <div className="col-md-6 order-md-3">
             <p className="text-md-start text-center">

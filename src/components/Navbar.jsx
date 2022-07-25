@@ -1,7 +1,8 @@
-import React, { useRef, useContext } from "react";
+import React, { useRef, useContext, useEffect } from "react";
 import logo from "../assets/images/logo.png";
 import { NavLink } from "react-router-dom";
 import { myContext } from "../App";
+import gsap from "gsap";
 
 const Navbar = () => {
   let extraLogo = useRef(null);
@@ -23,31 +24,54 @@ const Navbar = () => {
     }
   };
 
+  // gsap
+  const headerRef = useRef(null);
+  const navRef = useRef(null);
+  useEffect(() => {
+    const header = headerRef.current;
+    const nav = navRef.current;
+
+    gsap.from(header, {
+      y: "-50px",
+      opacity: 0.5,
+      duration: 1,
+      ease: "bounce.out",
+    });
+
+    gsap.from(nav, {
+      y: "-50px",
+      opacity: 0,
+      duration: 1,
+      delay: 1,
+      ease: "bounce.out",
+    });
+  }, []);
+
   return (
     <>
-      <div className="container-fluid" style={{ zIndex: "80" }}>
+      <div className="container-fluid" style={{ zIndex: "80" }} ref={headerRef}>
         <div className="container py-1">
           <div className="d-flex align-items-center justify-content-between">
             <small>info@kapbros.in</small>
 
             <ul className="list-unstyled d-flex align-items-center justify-content-between gap-2">
               <li>
-                <a href="javascript:void(0)">
+                <a href="/">
                   <i className="fa-brands fa-facebook text-primary"></i>
                 </a>
               </li>
               <li>
-                <a href="javascript:void(0)">
+                <a href="/">
                   <i className="fa-brands fa-instagram"></i>
                 </a>
               </li>
               <li>
-                <a href="javascript:void(0)">
+                <a href="/">
                   <i className="fa-brands fa-whatsapp text-success"></i>
                 </a>
               </li>
               <li>
-                <a href="javascript:void(0)">
+                <a href="/">
                   <i className="fa-solid fa-envelope text-danger"></i>
                 </a>
               </li>
@@ -55,7 +79,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <nav className="navbar navbar-expand-lg">
+      <nav className="navbar navbar-expand-lg" ref={navRef}>
         <div className="container py-2 d-flex align-items-center justify-content-lg-center justify-content-between">
           <div className="logo">
             <img src={logo} alt="" />

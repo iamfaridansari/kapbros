@@ -5,23 +5,23 @@ const Footer = () => {
   const quickLinks = [
     {
       name: "Product",
-      link: "javascript:void(0)",
+      link: "/",
     },
     {
       name: "Company",
-      link: "javascript:void(0)",
+      link: "/",
     },
     {
       name: "Information",
-      link: "javascript:void(0)",
+      link: "/",
     },
     {
       name: "About us",
-      link: "javascript:void(0)",
+      link: "/",
     },
     {
       name: "Contact us",
-      link: "javascript:void(0)",
+      link: "/",
     },
   ];
   return (
@@ -40,17 +40,17 @@ const Footer = () => {
           </a>
           <ul className="social d-flex align-items-center justify-content-start list-unstyled mt-5">
             <li className="me-5">
-              <a href="javascript:void(0)">
+              <a href="/">
                 <i className="fa-brands fa-linkedin-in"></i>
               </a>
             </li>
             <li className="me-5">
-              <a href="javascript:void(0)">
+              <a href="/">
                 <i className="fa-brands fa-facebook-f"></i>
               </a>
             </li>
             <li>
-              <a href="javascript:void(0)">
+              <a href="/">
                 <i className="fa-brands fa-twitter"></i>
               </a>
             </li>

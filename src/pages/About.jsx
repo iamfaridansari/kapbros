@@ -3,6 +3,7 @@ import { myContext } from "../App";
 
 const About = () => {
   const { five } = useContext(myContext);
+
   return (
     <>
       <div className="container-fluid" style={{ overflow: "hidden" }}>

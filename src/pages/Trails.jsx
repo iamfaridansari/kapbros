@@ -1,16 +1,6 @@
 import React, { useContext } from "react";
 import { myContext } from "../App";
 import { Link } from "react-router-dom";
-import carousel2 from "../assets/images/carousel2.png";
-import carousel3 from "../assets/images/carousel3.png";
-import carousel4 from "../assets/images/carousel4.png";
-import carousel5 from "../assets/images/carousel5.png";
-import carousel6 from "../assets/images/carousel6.png";
-import carousel7 from "../assets/images/carousel7.png";
-import carousel8 from "../assets/images/carousel8.png";
-import carousel9 from "../assets/images/carousel9.png";
-import carousel10 from "../assets/images/carousel10.png";
-import carousel11 from "../assets/images/carousel11.png";
 
 const Trails = () => {
   const { one, two, three, four, five, six, seven, eight, nine, ten } =
@@ -167,7 +157,11 @@ const Trails = () => {
                   className="myImage myRadius myShadow"
                   key={index}
                 >
-                  <img src={item.img} className="square myRadius myShadow" alt="" />
+                  <img
+                    src={item.img}
+                    className="square myRadius myShadow"
+                    alt=""
+                  />
                   <div className="name text-center">
                     <p className="text-white">{item.title}</p>
                   </div>
@@ -185,7 +179,11 @@ const Trails = () => {
             {gallery.rida.map((item, index) => {
               return (
                 <div className="myImage myRadius myShadow" key={index}>
-                  <img src={item.img} className="square myRadius myShadow" alt="" />
+                  <img
+                    src={item.img}
+                    className="square myRadius myShadow"
+                    alt=""
+                  />
                   <div className="name text-center">
                     <p className="text-white">{item.title}</p>
                   </div>
@@ -203,7 +201,11 @@ const Trails = () => {
             {gallery.forKids.map((item, index) => {
               return (
                 <div className="myImage myRadius myShadow" key={index}>
-                  <img src={item.img} className="square myRadius myShadow" alt="" />
+                  <img
+                    src={item.img}
+                    className="square myRadius myShadow"
+                    alt=""
+                  />
                   <div className="name text-center">
                     <p className="text-white">{item.title}</p>
                   </div>
