@@ -30,6 +30,10 @@ export const myContext = createContext();
 
 const App = () => {
   const [margin, setMargin] = useState(true);
+
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <myContext.Provider
       value={{
@@ -45,6 +49,7 @@ const App = () => {
         ten,
         margin,
         setMargin,
+        scrollToTop,
       }}
     >
       <Navbar />

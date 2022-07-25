@@ -1,8 +1,19 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useEffect } from "react";
 import { myContext } from "../App";
+import gsap from "gsap";
 
 const Contact = () => {
   const { eight } = useContext(myContext);
+
+  const imgRef = useRef(null);
+
+  useEffect(() => {
+    gsap.from(imgRef.current, {
+      scale: 0.5,
+      duration: 1,
+      ease: "linear",
+    });
+  }, []);
   return (
     <>
       <div className="row align-items-center justify-content-center m-0 my-5">
@@ -15,8 +26,8 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="container py-5 normalBorder">
-        <div className="row align-items-center justify-content-between gap-sm-0 gap-5">
+      <div className="container p-2 normalBorder">
+        <div className="row align-items-center justify-content-center gap-sm-0 gap-5">
           <div className="col-sm-6">
             <div className="row">
               <div className="col-sm-6 mb-4">
@@ -56,8 +67,13 @@ const Contact = () => {
             </div>
             <button className="myBtn mt-4">Submit</button>
           </div>
-          <div className="col-md-4 col-sm-6">
-            <img src={eight} className="normalBorder rounded myShadow" alt="" />
+          <div className="col-md-4 col-sm-6 col-8">
+            <img
+              src={eight}
+              className="normalBorder rounded myShadow"
+              ref={imgRef}
+              alt=""
+            />
           </div>
         </div>
       </div>

@@ -1,8 +1,43 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { myContext } from "../App";
+import gsap from "gsap";
 
 const Service = () => {
   const { two, three, four } = useContext(myContext);
+
+  const oneRef = useRef(null);
+  const twoRef = useRef(null);
+  const threeRef = useRef(null);
+
+  useEffect(() => {
+    gsap.from(oneRef.current, {
+      autoAlpha: 0,
+      scale: 0.5,
+      rotate: "45eg",
+      duration: 1,
+      ease: "linear",
+    });
+    gsap.from(twoRef.current, {
+      autoAlpha: 0,
+      scale: 0.5,
+      translateX: "-50%",
+      translateY: "-50%",
+      rotate: "45eg",
+      duration: 1,
+      ease: "linear",
+      delay: 1,
+    });
+    gsap.from(threeRef.current, {
+      autoAlpha: 0,
+      scale: 0.5,
+      translateX: "-100%",
+      translateY: "-50%",
+      rotate: "45eg",
+      duration: 1,
+      ease: "linear",
+      delay: 2,
+    });
+  }, []);
   return (
     <>
       <div className="container py-5">
@@ -13,6 +48,7 @@ const Service = () => {
                 src={two}
                 className="square normalBorder myShadow circle"
                 alt=""
+                ref={oneRef}
               />
             </div>
             <div className="circle3">
@@ -20,6 +56,7 @@ const Service = () => {
                 src={three}
                 className="square normalBorder myShadow circle"
                 alt=""
+                ref={twoRef}
               />
             </div>
             <div className="circle4">
@@ -27,6 +64,7 @@ const Service = () => {
                 src={four}
                 className="square normalBorder myShadow circle"
                 alt=""
+                ref={threeRef}
               />
             </div>
           </div>

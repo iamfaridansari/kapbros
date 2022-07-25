@@ -1,8 +1,21 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useEffect } from "react";
 import { myContext } from "../App";
+import gsap from "gsap";
 
 const About = () => {
   const { five } = useContext(myContext);
+
+  const circleRef = useRef(null);
+  useEffect(() => {
+    const circle = circleRef.current;
+
+    gsap.from(circle, {
+      rotate: "45deg",
+      scale: 0.75,
+      duration: 1,
+      ease: "linear",
+    });
+  }, []);
 
   return (
     <>
@@ -14,6 +27,7 @@ const About = () => {
                 src={five}
                 className="square myShadow normalBorder circle"
                 alt=""
+                ref={circleRef}
               />
             </div>
           </div>

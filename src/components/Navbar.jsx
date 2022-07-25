@@ -1,6 +1,6 @@
 import React, { useRef, useContext, useEffect } from "react";
 import logo from "../assets/images/logo.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { myContext } from "../App";
 import gsap from "gsap";
 
@@ -8,7 +8,7 @@ const Navbar = () => {
   let extraLogo = useRef(null);
   const header = useRef(null);
 
-  const { margin, setMargin } = useContext(myContext);
+  const { margin, setMargin, scrollToTop } = useContext(myContext);
 
   const removeMargin = () => {
     setMargin(!margin);
@@ -81,9 +81,9 @@ const Navbar = () => {
       </div>
       <nav className="navbar navbar-expand-lg" ref={navRef}>
         <div className="container py-2 d-flex align-items-center justify-content-lg-center justify-content-between">
-          <div className="logo">
+          <Link to="/" className="logo">
             <img src={logo} alt="" />
-          </div>
+          </Link>
           <div
             className="hamburger navbar-toggler"
             type="button"
@@ -106,39 +106,59 @@ const Navbar = () => {
           <div className="container sticky navbar-nav me-auto mb-lg-0 py-2">
             <ul className="d-flex align-items-center justify-content-center text-center list-unstyled flex-lg-row flex-column links">
               <li className="extraLogo mx-md-4 mb-lg-0 mb-3" ref={extraLogo}>
-                <NavLink to="/" className="pb-1 mb-md-0">
+                <NavLink to="/" className="pb-1 mb-md-0" onClick={scrollToTop}>
                   <div className="extrLogoImg">
                     <img src={logo} alt="" />
                   </div>
                 </NavLink>
               </li>
               <li className="mx-md-4 mb-lg-0 mb-3">
-                <NavLink to="/" className="pb-1 mb-md-0">
+                <NavLink to="/" className="pb-1 mb-md-0" onClick={scrollToTop}>
                   Home
                 </NavLink>
               </li>
               <li className="mx-md-4 mb-lg-0 mb-3">
-                <NavLink to="/about" className="pb-1 mb-md-0">
+                <NavLink
+                  to="/about"
+                  className="pb-1 mb-md-0"
+                  onClick={scrollToTop}
+                >
                   About
                 </NavLink>
               </li>
               <li className="mx-md-4 mb-lg-0 mb-3">
-                <NavLink to="/service" className="pb-1 mb-md-0">
+                <NavLink
+                  to="/service"
+                  className="pb-1 mb-md-0"
+                  onClick={scrollToTop}
+                >
                   Our Services
                 </NavLink>
               </li>
               <li className="mx-md-4 mb-lg-0 mb-3">
-                <NavLink to="/trails" className="pb-1 mb-md-0">
+                <NavLink
+                  to="/trails"
+                  className="pb-1 mb-md-0"
+                  onClick={scrollToTop}
+                >
                   Trails
                 </NavLink>
               </li>
               <li className="mx-md-4 mb-lg-0 mb-3">
-                <NavLink to="/contact" className="pb-1 mb-md-0">
+                <NavLink
+                  to="/contact"
+                  className="pb-1 mb-md-0"
+                  onClick={scrollToTop}
+                >
                   Contact us
                 </NavLink>
               </li>
               <li className="mx-md-4 mb-lg-0 mb-3">
-                <NavLink to="/registration" className="pb-1 mb-md-0">
+                <NavLink
+                  to="/registration"
+                  className="pb-1 mb-md-0"
+                  onClick={scrollToTop}
+                >
                   Registration
                 </NavLink>
               </li>

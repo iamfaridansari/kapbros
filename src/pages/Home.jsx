@@ -81,35 +81,26 @@ const Home = () => {
   const img1Ref = useRef(null);
   const img2Ref = useRef(null);
   const img3Ref = useRef(null);
+  const leftRef = useRef(null);
+  const rightRef = useRef(null);
 
   useEffect(() => {
     const discoverImg = discoverImgRef.current;
     const img1 = img1Ref.current;
     const img2 = img2Ref.current;
     const img3 = img3Ref.current;
+    const left = leftRef.current;
+    const right = rightRef.current;
 
     gsap.from(discoverImg, {
       scale: 0.5,
       duration: 1,
-      ease: "expo.in",
+      ease: "linear",
       scrollTrigger: {
         trigger: discoverImg,
         start: "top 80%",
         end: "top 80%",
-        toggleActions: "resume pause restart complete",
-        scrub: 2,
-      },
-    });
-
-    gsap.from(".myImage", {
-      scale: 0.5,
-      duration: 1,
-      ease: "expo.in",
-      scrollTrigger: {
-        trigger: ".myCarouselContainer",
-        start: "top 80%",
-        end: "top 80%",
-        toggleActions: "resume pause restart complete",
+        toggleActions: "resume none none reverse",
         scrub: 2,
       },
     });
@@ -117,40 +108,111 @@ const Home = () => {
     gsap.from(img1, {
       scale: 0.5,
       duration: 1,
-      ease: "expo.in",
+      ease: "linear",
       scrollTrigger: {
         trigger: img1,
         start: "top 80%",
         end: "top 80%",
-        toggleActions: "resume pause restart complete",
+        toggleActions: "resume none none reverse",
         scrub: 2,
       },
     });
     gsap.from(img2, {
       scale: 0.5,
       duration: 1,
-      ease: "expo.in",
+      ease: "linear",
       scrollTrigger: {
         trigger: img2,
         start: "top 80%",
         end: "top 80%",
-        toggleActions: "resume pause restart complete",
+        toggleActions: "resume none none reverse",
         scrub: 2,
       },
     });
     gsap.from(img3, {
       scale: 0.5,
       duration: 1,
-      ease: "expo.in",
+      ease: "linear",
       scrollTrigger: {
         trigger: img3,
         start: "top 80%",
         end: "top 80%",
-        toggleActions: "resume pause restart complete",
+        toggleActions: "resume none none reverse",
         scrub: 2,
       },
     });
+
+    gsap.from(left, {
+      translateX: "-50%",
+      duration: 1,
+      ease: "linear",
+      scrollTrigger: {
+        trigger: left,
+        start: "top 80%",
+        end: "top 80%",
+        toggleActions: "resume none none reverse",
+        scrub: 2,
+      },
+    });
+    gsap.from(right, {
+      translateX: "50%",
+      duration: 1,
+      ease: "linear",
+      scrollTrigger: {
+        trigger: right,
+        start: "top 80%",
+        end: "top 80%",
+        toggleActions: "resume none none reverse",
+        scrub: 2,
+      },
+    });
+
+    revealRefs.current.forEach((item) => {
+      gsap.from(item, {
+        x: 100,
+        duration: 1,
+        ease: "linear",
+        scrollTrigger: {
+          trigger: item,
+          start: "top 80%",
+          end: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      });
+    });
+
+    cardRef.current.forEach((item) => {
+      gsap.from(item, {
+        y: 100,
+        autoAlpha: 0.5,
+        duration: 1,
+        ease: "linear",
+        scrollTrigger: {
+          trigger: item,
+          start: "center 80%",
+          toggleActions: "play none none reverse",
+        },
+      });
+    });
   }, []);
+
+  const revealRefs = useRef([]);
+  revealRefs.current = [];
+
+  const addToRef = (el) => {
+    if (el && !revealRefs.current.includes(el)) {
+      revealRefs.current.push(el);
+    }
+  };
+
+  const cardRef = useRef([]);
+  cardRef.current = [];
+
+  const addCardRef = (item) => {
+    if (item && !cardRef.current.includes(item)) {
+      cardRef.current.push(item);
+    }
+  };
 
   return (
     <>
@@ -206,8 +268,8 @@ const Home = () => {
       </div>
 
       <div className="container py-5">
-        <div className="row align-items-start justify-content-between gap-md-0 gap-5">
-          <div className="col-md-4 col-sm">
+        <div className="row align-items-start justify-content-center gap-md-0 gap-5">
+          <div className="col-md-4 col-sm col-8">
             <img
               src={seven}
               className="normalBorder myShadow"
@@ -252,7 +314,11 @@ const Home = () => {
           <div className="myCarousel">
             {myCarouselImages.map((item, index) => {
               return (
-                <div className="myImage myRadius myShadow" key={index}>
+                <div
+                  className="myImage myRadius myShadow"
+                  key={index}
+                  ref={addToRef}
+                >
                   <img
                     src={item.img}
                     className="square myRadius myShadow"
@@ -285,7 +351,7 @@ const Home = () => {
           <div className="col-md-2 order-md-2 text-center">
             <p className="text-uppercase dashedBorder p-1">From basic</p>
           </div>
-          <div className="col-md-3 col-sm-6 order-md-1">
+          <div className="col-md-3 col-sm-6 col-8 order-md-1">
             <img
               src={one}
               className="square myRadius myShadow"
@@ -311,7 +377,7 @@ const Home = () => {
           <div className="col-md-2 order-md-2 text-center">
             <p className="text-uppercase dashedBorder p-1">To occasions</p>
           </div>
-          <div className="col-md-3 col-sm-6 order-md-3">
+          <div className="col-md-3 col-sm-6 col-8 order-md-3">
             <img
               src={seven}
               className="square myRadius myShadow"
@@ -337,7 +403,7 @@ const Home = () => {
           <div className="col-md-2 order-md-2 text-center">
             <p className="text-uppercase dashedBorder p-1">to wedding wear</p>
           </div>
-          <div className="col-md-3 col-sm-6 order-md-1">
+          <div className="col-md-3 col-sm-6 col-8 order-md-1">
             <img
               src={three}
               className="square myRadius myShadow"
@@ -378,7 +444,11 @@ const Home = () => {
         <div className="d-flex align-items-center justify-content-between gap-5 flex-md-row flex-column">
           {basics.map((item, index) => {
             return (
-              <div className="shadow p-4 text-center myCard" key={index}>
+              <div
+                className="shadow p-4 text-center myCard"
+                key={index}
+                ref={addCardRef}
+              >
                 <div className="min-height">
                   <i className={item.icon}></i>
                   <p className="title text-uppercase mb-2">{item.title}</p>
@@ -393,7 +463,7 @@ const Home = () => {
       <div className="container-fluid discuss py-5 secondaryBg bg-gradient">
         <div className="container">
           <div className="row align-items-start justify-content-between gap-5">
-            <div className="col-md">
+            <div className="col-md" ref={leftRef}>
               <h1 className="fw-bold mb-2">
                 Want a dress? <br />
                 Let's discuss.
@@ -403,7 +473,7 @@ const Home = () => {
                 Kindly. <br /> Fill the form, Have a great day.
               </p>
             </div>
-            <div className="col-md">
+            <div className="col-md" ref={rightRef}>
               <form className="newsletter">
                 <div className="row align-items-start justify-content-between ">
                   <div className="col-md-6 mb-4">
